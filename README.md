@@ -1,42 +1,41 @@
 # LogLens
 
-LogLens is a local, command-line Python script for counting records in a CSV log file. You can count all records or only records that match a specific log file.
+LogLens is a local, command-line Python script for counting records in a CSV log file. You can count all records or only records that match a specific log level.
+
 LogLens reads the input CSV without modifying it. It does not transmit, upload, or store the input data outside your computer.
 
 ## Requirements and things
 
-You need Python 3.10 or newer and only uses the Python standard library. No pip install or third-party dependencies are needed.
+You need Python 3.10 or newer. LogLens only uses the Python standard library. No `pip install` or third-party dependencies are needed.
 
 ## Get started
 
-See "docs/INSTALL.md" for download instructions. After extracting the project files, open a terminal in the repository root, the folder that contains "LogLens.py".
+See `docs/INSTALL.md` for download instructions. After extracting the project files, open a terminal in the repository root, the folder that contains `loglens.py`.
 
 ## Using the program
 
-Accepted log levels are INFO, WARN, and ERROR(uppercase). The --level argument is optimal. When omitted, it counts all records.
+Accepted log levels are `INFO`, `WARN`, and `ERROR`. The `--level` argument is optional. When omitted, it counts all records.
 
-The `--file` argument is required. Run commands from the repository root, where `LogLens.py` is located.
+The `--file` argument is required. Run commands from the repository root, where `loglens.py` is located.
 
 `python loglens.py --file data/sample_logs.csv --level ERROR`
 
 Expected result:
 
-Records matching ERROR: 2
+`Records matching ERROR: 2`
 
-Or omit the optional level:
+Omit the optional level:
 
 `python loglens.py --file data/sample_logs.csv`
 
 Expected result:
 
-Records matching ALL: 6
-
-The software scans your log, fixes mistakes, and shows you what went wrong. You will see a number once it is finished. You can also run it on real production files without worrying about any side effects.
+`Records matching ALL: 6`
 
 ## Input format
 
-The input should be a CSV file with column headers named exactly "timestamp", "level", and "message". The sample CSV file is at "data/sample_logs.csv"
+The input must be a CSV file with column headers named exactly `timestamp`, `level`, and `message`. The sample CSV file is at `data/sample_logs.csv`.
 
 ## Questions
 
-if you have a problem, describe what happened and include the command you ran and the error messages with sensitive content removed. If a CSV example would help, share only a sanitized sample in the public issue.
+If you have a problem, describe what happened and include the command you ran and the error messages with sensitive content removed. If a CSV example would help, share only a sanitized sample in the public issue.
