@@ -13,9 +13,23 @@ See "docs/INSTALL.md" for download instructions. After extracting the project fi
 
 ## Using the program
 
-Run the following command after you have found the correct folder:
+Accepted log levels are INFO, WARN, and ERROR(uppercase). The --level argument is optimal. When omitted, it counts all records.
 
-`loglens --input mylog.csv --severity error`
+The `--file` argument is required. Run commands from the repository root, where `LogLens.py` is located.
+
+`python loglens.py --file data/sample_logs.csv --level ERROR`
+
+Expected result:
+
+Records matching ERROR: 2
+
+Or omit the optional level:
+
+`python loglens.py --file data/sample_logs.csv`
+
+Expected result:
+
+Records matching ALL: 6
 
 The software scans your log, fixes mistakes, and shows you what went wrong. You will see a number once it is finished. You can also run it on real production files without worrying about any side effects.
 
