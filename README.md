@@ -1,10 +1,10 @@
-# LogLens - find all your log problems fast
+# LogLens
 
 LogLens is a really simple program that tells you what's happening in your logs. It is useful for developers, IT staff, customers, and anybody who has a computer. You don't really need to know anything about log files to get started. It finds problems in your files, so you can use it to make decisions about your system. Your data is always 100% secure.
 
 ## Requirements and things
 
-You need Python. Most computers already have it, and version 3.6 or later should be good enough. It works on Windows, Mac, and Linux. Other than that, there is not much to know.
+You need Python 3.10 or newer and only uses the Python standard library. No pip install or third-party dependencies are needed.
 
 ## Get started
 
@@ -20,8 +20,8 @@ The software scans your log, fixes mistakes, and shows you what went wrong. You 
 
 ## Input format
 
-The input should be a CSV file. Log files tend to have fields describing the time and what happened, but LogLens is flexible and will work with whatever columns your monitoring system uses. A small example is included somewhere in this repository.
+The input should be a CSV file with column headers named exactly "timestamp", "level", and "message".
 
 ## Questions
 
-If something doesn't work, just contact the developers or create an issue. Make sure you describe the problem so somebody can help. This is a basic tool, so the instructions should be pretty obvious.
+if you have a problem, describe what happened and include the command you ran and the error messages with sensitive content removed. If a CSV example would help, share only a sanitized sample in the public issue.
