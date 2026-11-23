@@ -9,7 +9,7 @@ You need Python 3.10 or newer and only uses the Python standard library. No pip 
 
 ## Get started
 
-First, get the project files from GitHub. Then install the program using `pip install log-lens` and run it by typing `loglens`. If you can't make it work, see docs/INSTALL.md. You probably won't need those instructions.
+See "docs/INSTALL.md" for download instructions. After extracting the project files, open a terminal in the repository root, the folder that contains "LogLens.py".
 
 ## Using the program
 
