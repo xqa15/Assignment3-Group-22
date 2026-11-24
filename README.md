@@ -10,31 +10,39 @@ You need Python 3.10 or newer. LogLens only uses the Python standard library. No
 
 ## Get started
 
-See `docs/INSTALL.md` for download instructions. After extracting the project files, open a terminal in the repository root, the folder that contains `loglens.py`.
+See the [installation guide](docs/INSTALL.md) for download instructions. After extracting the project files, open a terminal in the repository root, the folder that contains `loglens.py`.
 
 ## Using the program
 
-Accepted log levels are `INFO`, `WARN`, and `ERROR`. The `--level` argument is optional. When omitted, it counts all records.
+Accepted log levels are `INFO`, `WARN`, and `ERROR`. The `--level` argument is optional. When omitted, LogLens counts all records.
 
 The `--file` argument is required. Run commands from the repository root, where `loglens.py` is located.
 
-`python loglens.py --file data/sample_logs.csv --level ERROR`
+```bash
+python loglens.py --file data/sample_logs.csv --level ERROR
+```
 
 Expected result:
 
-`Records matching ERROR: 2`
+```text
+Records matching ERROR: 2
+```
 
 Omit the optional level:
 
-`python loglens.py --file data/sample_logs.csv`
+```bash
+python loglens.py --file data/sample_logs.csv
+```
 
 Expected result:
 
-`Records matching ALL: 6`
+```text
+Records matching ALL: 6
+```
 
 ## Input format
 
-The input must be a CSV file with column headers named exactly `timestamp`, `level`, and `message`. The sample CSV file is at `data/sample_logs.csv`.
+The input must be a CSV file with column headers named exactly `timestamp`, `level`, and `message`. The sample CSV file is at [sample CSV file](data/sample_logs.csv).
 
 ## Questions
 
