@@ -10,7 +10,7 @@ LogLens uses only the Python standard library, so no `pip install` is needed. Yo
 
 ## Download the project files
 
-- On LogLens GitHub repository page, look for the green button and download a ZIP.
+- On LogLens GitHub repository page, look for the green button `Code` and download a ZIP.
 - Extract the ZIP file.
 - Open a terminal in the repository root, the folder that contains `loglens.py`.
 
